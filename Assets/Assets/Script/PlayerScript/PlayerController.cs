@@ -8,6 +8,8 @@ public class PlayerController : BaseController
     private Rigidbody rb;
 
     public Transform bullet_StartPoint;
+    public GameObject bulletPrefab;
+    public ParticleSystem shootFX;
 
 
     public bool canShoot;
@@ -92,6 +94,18 @@ public class PlayerController : BaseController
         else
         {
             transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.Euler(0f, 0f, 0f), Time.deltaTime * rotationSpeed);
+        }
+    }
+
+    public void Shoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject bullet = Instantiate(bulletPrefab, bullet_StartPoint.position, Quaternion.identity);
+            bullet.GetComponent<BulletScript>().move(2000f);
+
+            shootFX.Play();
+
         }
     }
 }
