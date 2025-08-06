@@ -3,15 +3,16 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     [SerializeField]
-    private Rigidbody rb;
-    
-    void Start()
+    private Rigidbody mybody;
+
+    void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        mybody = GetComponent<Rigidbody>();
     }
 
+
     public void move(float speed){
-        rb.AddForce(transform.forward.normalized * speed);
+    mybody.AddForce(transform.forward.normalized * speed);
         Invoke("DeactivateGameObject", 2f);
     }
 

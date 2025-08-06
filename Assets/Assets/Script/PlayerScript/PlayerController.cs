@@ -23,6 +23,7 @@ public class PlayerController : BaseController
     {
         ControlMovementWithKeyboard();
         ChangeRotation();
+        ShootingControl();
     }
 
     void FixedUpdate()
@@ -97,7 +98,7 @@ public class PlayerController : BaseController
         }
     }
 
-    public void Shoot()
+    public void ShootingControl()
     {
         if (Input.GetMouseButtonDown(0))
         {
