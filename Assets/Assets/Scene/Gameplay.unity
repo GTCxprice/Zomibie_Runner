@@ -813,6 +813,7 @@ MonoBehaviour:
   - {fileID: 1379677112}
   - {fileID: 843674978}
   min_ObstacleDelay: 10
+  max_ObstacleDelay: 40
 --- !u!4 &881166275
 Transform:
   m_ObjectHideFlags: 0

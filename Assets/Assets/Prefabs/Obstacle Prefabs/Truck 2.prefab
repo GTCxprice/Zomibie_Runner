@@ -184,9 +184,10 @@ GameObject:
   - component: {fileID: 2078125278689217012}
   - component: {fileID: 4045736058332449134}
   - component: {fileID: 2938488220197498866}
+  - component: {fileID: 3692831434094572500}
   m_Layer: 0
   m_Name: Truck 2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,3 +283,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.4229693, y: 4.393261, z: 10.811964}
   m_Center: {x: 0, y: 2.1966305, z: 0.00000023841858}
+--- !u!114 &3692831434094572500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4904715616269168599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b2dae0d1200874597e088917dbb7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678, type: 3}
+  damage: 20

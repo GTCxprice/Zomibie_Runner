@@ -99,9 +99,10 @@ GameObject:
   - component: {fileID: 2431298801164987079}
   - component: {fileID: 9059745255099541125}
   - component: {fileID: 6442267219233807774}
+  - component: {fileID: -3870779615317635008}
   m_Layer: 0
   m_Name: Truck 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,6 +295,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-3870779615317635008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232511830570005206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b2dae0d1200874597e088917dbb7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678, type: 3}
+  damage: 20
 --- !u!1 &8661164133146914345
 GameObject:
   m_ObjectHideFlags: 0

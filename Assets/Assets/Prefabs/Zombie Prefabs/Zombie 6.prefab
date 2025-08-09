@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4109540792033744590}
   - component: {fileID: 8087817513407529104}
   - component: {fileID: 2237010575174438925}
+  - component: {fileID: -6220477529388444161}
   m_Layer: 0
   m_Name: Zombie 6
   m_TagString: Untagged
@@ -82,6 +83,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.41, y: 0.81, z: 0.22}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-6220477529388444161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8180589599651549242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4e0caa812546f4384e73b481c84629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodFXPrefab: {fileID: 1690365919121730, guid: 01905950d6bb84877a984f64b83d6c2d, type: 3}
+  speed: 1
 --- !u!1001 &5273541643021328264
 PrefabInstance:
   m_ObjectHideFlags: 0
