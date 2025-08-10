@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : BaseController
 {
@@ -11,19 +12,25 @@ public class PlayerController : BaseController
     public GameObject bulletPrefab;
     public ParticleSystem shootFX;
 
-
+    private Animator ShootSlider;
+    [HideInInspector]
     public bool canShoot;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        ShootSlider = GameObject.Find("Fire bar ").GetComponent<Animator>();
+        GameObject.Find("Shoot BTN").GetComponent<Button>().onClick.AddListener(ShootingControl);
+        canShoot = true;
     }
 
     void Update()
     {
         ControlMovementWithKeyboard();
         ChangeRotation();
-        ShootingControl();
+
     }
 
     void FixedUpdate()
@@ -100,13 +107,17 @@ public class PlayerController : BaseController
 
     public void ShootingControl()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(Time.timeScale != 0)
         {
-            GameObject bullet = Instantiate(bulletPrefab, bullet_StartPoint.position, Quaternion.identity);
-            bullet.GetComponent<BulletScript>().move(2000f);
+            if (canShoot)
+            {
+                GameObject bullet = Instantiate(bulletPrefab, bullet_StartPoint.position, Quaternion.identity);
+                bullet.GetComponent<BulletScript>().move(2000f);
+                shootFX.Play();
 
-            shootFX.Play();
-
+                canShoot = false;
+                ShootSlider.Play("FadeIn");
+            }
         }
     }
 }
