@@ -5,6 +5,31 @@ A fast-paced endless runner built in Unity where you escape zombies, dodge obsta
 Zombie Runner is an endless runner game created with Unity. The player is continuously chased by zombies and must dodge obstacles, collect power-ups, and survive as long as possible.  
 This repository contains the full Unity project including scripts, scenes, assets, and settings required to build, run, and extend the game.
 
+---
+
+## Version History
+
+### ✅ **v2 — Current Stable Version**
+All major issues from v1 have been fixed and polished:
+- ✔ Fixed obstacle spawning below the ground  
+- ✔ Added pause menu + pause functionality  
+- ✔ Added exit/quit option  
+- ✔ Fixed all audio playback issues  
+- ✔ Added restart button  
+- ✔ Fixed buggy zombie counter  
+- ✔ General stability and performance improvements  
+
+### ❌ **v1 — Initial Release (Buggy Version)**  
+The first version contained several issues:
+- ❗ Obstacles spawned below ground  
+- ❗ No pause menu or pause feature  
+- ❗ No exit button  
+- ❗ Audio not working correctly  
+- ❗ No restart button  
+- ❗ Zombie counter was glitchy / inaccurate  
+
+---
+
 ## Features  
 - ✅ Endless level generation with dynamic obstacle spawning  
 - ✅ Progressive zombie chase mechanic  
